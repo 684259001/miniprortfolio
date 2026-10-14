@@ -68,7 +68,7 @@ body {
     height: 70px;
     /* ช่วยคุมขนาดกล่องไม่ให้อ้วนไป */
     box-sizing: border-box;
-    
+
     /* ชิดบนกะชิดซ้าย */
     top: 0;
     left: 0;
@@ -138,6 +138,10 @@ body {
 }
 
 .profile-btn {
+    /* เรียงเเนวนอน + ตั้งค่าขนาดอะ */
+    display: inline-block;
+    /* ไม่มีการแต่งเส้นใต้ */
+    text-decoration: none;
     color: var(--text-secondary);
     /* กรอบของปุ่ม */
     border: 2px solid var(--bg-light);
