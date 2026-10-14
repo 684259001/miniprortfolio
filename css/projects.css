@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* ================ background colors ================ */
+    --bg-primary: #ff6eb6;
+    --bg-secondary: #ffe803;
+    --bg-pastel-secondary: #fff8ae;
+    --bg-light: #ffffff;
+    --bg-header: linear-gradient(90deg, #dbedff, #a4d6f1);
+    --bg-card: linear-gradient(90deg, #2f3337, #101d33);
+
+    /* ================ text colors ================ */
+    --text-primary: #925946;
+    --text-secondary: #ffe803;
+    --text-dark: #2c0f00;
+    --text-pastel-secondary: #fff8ae;
+    --text-light: #ffffff;
+    --text-black: #000000;
+
+}
+body {
+    /* 'Raleway' */
+    font-family: 'Kanit';
+
+    /* ระยะห่างระหว่างบรรทัด */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-header);
+    padding-top: 70px; /* ระยะว่างสำหรับ header ที่ fixed */
+}
+/* =============== header ==============*/
+.header {
+    background: var(--bg-light);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+    /* จะทำให้เฮดมันไม่ขยับ */
+    position: fixed;
+    display: flex;
+    /* จัดพื้นที่ว่างให้ระหว่างของอยู่ห่างกัน */
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+
+.header-title {
+    font-size: 30px;
+    /* ตัวหนา */
+    font-weight: bold;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 20px;
+}
+/* =============== navbar ==============*/
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+}
+
+.nav-list a {
+    /* ไม่มีเส้นใต้ */
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 18px;
+    /* บน-ล่าง และ ซ้าย-ขวา */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.nav-list a:hover {
+    background-color: var(--bg-pastel-secondary);
+    color: var(--text-dark);
+}
+
+/* =============== main layout ==============*/
+.main-layout {
+    /* จัดให้เฮดอยู่บนสุดและให้ฟุตเตอร์ติด้านล่างสุด */
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.work-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(44, 15, 0, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.work-card img {
+    display: block;
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.work-content {
+    padding: 1rem 1.2rem 1.4rem;
+}
+
+.work-content h2 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.work-content p {
+    color: var(--text-dark);
+}
+
+/* =============== footer ==============*/
+.footer {
+    margin-top: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-black);
+    padding: 20px;
+    width: 100%;
+}

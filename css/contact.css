@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* ================ background colors ================ */
+    --bg-primary: #ff6eb6;
+    --bg-secondary: #ffe803;
+    --bg-pastel-secondary: #fff8ae;
+    --bg-light: #ffffff;
+    --bg-header: linear-gradient(90deg, #dbedff, #a4d6f1);
+    --bg-card: linear-gradient(90deg, #2f3337, #101d33);
+
+    /* ================ text colors ================ */
+    --text-primary: #925946;
+    --text-secondary: #ffe803;
+    --text-dark: #2c0f00;
+    --text-pastel-secondary: #fff8ae;
+    --text-light: #ffffff;
+    --text-black: #000000;
+
+}
+
+body {
+    /* 'Raleway' */
+    font-family: 'Kanit';
+
+    /* ระยะห่างระหว่างบรรทัด */
+    line-height: 1.6;
+
+    /* รูปภาพเป็นพื้นหลัง */
+    background-image: url("../images/Kama01.JPG");
+
+    /* ขยายรูปให้เต็มพื้นที่หน้าจอ */
+    background-size: cover;
+
+    /* จัดรูปให้อยู่ตรงกลาง */
+    background-position: center;
+
+    /* ไม่ให้รูปภาพเรียงซ้ำๆ ถ้าไม่ใส่อาจจะถูกนำไปเรียงต่อกันคล้ายตาราง */
+    background-repeat: no-repeat;
+
+    /* ให้พื้นหลังอยู่กับที่ขณะเลื่อนหน้าเว็บ */
+    background-attachment: fixed;
+
+
+}
+
+/* =============== header ==============*/
+.header {
+    background: var(--bg-light);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+    /* จะทำให้เฮดมันไม่ขยับ */
+    position: fixed;
+    display: flex;
+    /* จัดพื้นที่ว่างให้ระหว่างของอยู่ห่างกัน */
+    justify-content: space-between;
+    align-items: center;
+
+    /* ความกว้างเต็มพื้นที่ */
+    width: 100%;
+    /* กำหนดความสูงของเฮดอ่ะ */
+    height: 70px;
+    /* ช่วยคุมขนาดกล่องไม่ให้อ้วนไป */
+    box-sizing: border-box;
+
+    /* ชิดบนกะชิดซ้าย */
+    top: 0;
+    left: 0;
+    /* ให้เฮดมันอยู่ด้านบนสุดอะทับทั้งหน้าอ่ะ */
+    z-index: 9999;
+
+}
+
+.header-title {
+    font-size: 30px;
+    /* ตัวหนา */
+    font-weight: bold;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 15px;
+}
+
+/* =============== navbar ==============*/
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+}
+
+.nav-list a {
+    /* ไม่มีเส้นใต้ */
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 18px;
+    /* บน-ล่าง และ ซ้าย-ขวา */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.nav-list a:hover {
+    background-color: var(--bg-pastel-secondary);
+    color: var(--text-dark);
+}
+
+/* =============== main-layout ==============*/
+.main-layout {
+    display: flex;
+    /*  จจัดเรียงข้อความจากบนลงล่าง */
+    flex-direction: column;
+
+    /* จัดให้กล่องอยู่ทางซ้าย */
+    align-items: center;
+    padding: 200px;
+}
+
+.main-name {
+    color: var(--text-light);
+}
+
+.main-name h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-name p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.contect-list {
+    padding: 10px;
+    list-style: none;
+
+}
+
+.contect-list a {
+    /* ไม่มีเส้นใต้ */
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 18px;
+    /* บน-ล่าง และ ซ้าย-ขวา */
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.contect-list a:hover {
+    color: var(--text-secondary);
+}
+
+.back-btn {
+    color: var(--text-secondary);
+    /* กรอบของปุ่ม */
+    border: 2px solid var(--bg-light);
+    border-radius: 50px;
+
+    margin: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: var(--bg-pastel-secondary);
+    color: var(--text-dark);
+}
+
+/* =============== footer ==============*/
+
+.footer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    padding: 20px;
+    margin-top: 30px;
+}

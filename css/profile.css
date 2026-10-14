@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* ================ background colors ================ */
+    --bg-primary: #ff6eb6;
+    --bg-secondary: #ffe803;
+    --bg-pastel-secondary: #fff8ae;
+    --bg-light: #ffffff;
+    --bg-gradient: linear-gradient(15deg, var(--bg-primary), var(--bg-secondary));
+    --bg-header: linear-gradient(90deg, #ffd6e5, #ffb5da);
+    --bg-card: linear-gradient(90deg, #ffd6e5, #ffb5da);
+    --bg-dark: #ca3e84;
+
+    /* ================ text colors ================ */
+    --text-primary: #925946;
+    --text-secondary: #ffe803;
+    --text-dark: #2c0f00;
+    --text-pastel-secondary: #fff8ae;
+    --text-light: #ffffff;
+    --text-black: #000000;
+    --text-pink: #ff6eb6;
+
+}
+
+body {
+    /* 'Raleway' */
+    font-family: 'Kanit';
+
+    /* ระยะห่างระหว่างบรรทัด */
+    line-height: 1.6;
+
+    background-color: var(--bg-light);
+    /* รูปภาพเป็นพื้นหลัง */
+    background-image: url("/images/bgkama.png");
+
+    /* ขยายรูปให้เต็มพื้นที่หน้าจอ */
+    background-size: cover;
+
+    /* จัดรูปให้อยู่ตรงกลาง */
+    background-position: center;
+
+    /* ไม่ให้รูปภาพเรียงซ้ำๆ ถ้าไม่ใส่อาจจะถูกนำไปเรียงต่อกันคล้ายตาราง */
+    background-repeat: no-repeat;
+
+    /* ให้พื้นหลังอยู่กับที่ขณะเลื่อนหน้าเว็บ */
+    background-attachment: fixed;
+}
+
+/* =============== header ==============*/
+.header {
+    background: var(--bg-light);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+    /* จะทำให้เฮดมันไม่ขยับ */
+    position: fixed;
+    display: flex;
+    /* จัดพื้นที่ว่างให้ระหว่างของอยู่ห่างกัน */
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+
+.header-title {
+    font-size: 30px;
+    /* ตัวหนา */
+    font-weight: bold;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 20px;
+}
+
+/* =============== navbar ==============*/
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+}
+
+.nav-list a {
+    /* ไม่มีเส้นใต้ */
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 18px;
+    /* บน-ล่าง และ ซ้าย-ขวา */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.nav-list a:hover {
+    background-color: var(--bg-pastel-secondary);
+    color: var(--text-dark);
+}
+
+/* =============== main-layout ==============*/
+.hero {
+    margin-top: 80px;
+}
+
+.content {
+    padding: 15px;
+    color: var(--text-light);
+    text-align: left;
+    /* text-decoration: underline; */
+}
+
+.content-hero {
+    padding-left: 25px;
+    color: var(--text-secondary);
+}
+
+.content-list {
+    padding: 15px;
+}
+
+.short-line {
+    /* กำหนดความกว้างของเส้น (ปรับ % ได้ตามต้องการ) */
+    width: 50%;
+    /* จัดเส้นให้ชิดซ้าย */
+    margin-left: 0;
+    margin-right: auto;
+
+}
+
+/* =============== footer ==============*/
+
+.footer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    padding: 20px;
+}
