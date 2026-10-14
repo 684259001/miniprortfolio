@@ -147,3 +147,40 @@ body {
     color: var(--text-secondary);
     padding: 20px;
 }
+/* ============================ Responsive ============================= */
+
+/* ============== mobile ============= */
+@media (max-width: 786px) {
+    .header-title {
+        font-size: 22px;
+        padding: 10px;
+    }
+    .nav-list {
+        gap: 10px;
+        padding-right: 10px;
+    }
+    .nav-list a {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+    .hero {
+        /* ดันเนื้อหาลงมาจาก fixed header (margin-top คือดันจากข้างบนอ่ะ) */
+        margin-top: 70px;
+        padding: 10px;
+    }
+    .content {
+        padding: 10px;
+    }
+    .content-hero {
+        padding-left: 0;
+        font-size: 20px;
+    }
+    /* ยืดเส้นใต้ให้ยาวขึ้น */
+    .short-line {
+        width: 80%;
+    }
+    .content p, 
+    .content-list {
+        font-size: 14px;
+    }
+}

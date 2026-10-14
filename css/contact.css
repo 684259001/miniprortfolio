@@ -186,3 +186,47 @@ body {
     padding: 20px;
     margin-top: 30px;
 }
+
+/* ============================ Responsive ============================= */
+
+/* ============== mobile ============= */
+@media (max-width: 786px) {
+    /* ย่อขนาดหัวข้อ Header ให้พอดีกับหน้าจอมือถือ */
+    .header-title {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .nav-list {
+        /* ขยับระยะของไอเมนูให้ห่างนิดเดียว */
+        gap: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-list a {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+
+    .main-layout {
+        /* ปรับระยะ padding หน้าเว็บให้พอดีกับมือถือไม่ดันลงเยอะเกิน */
+        padding: 120px 20px 50px;
+    }
+    .main-name h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .contect-list {
+        padding: 5px;
+    }
+    .contect-list a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .back-btn {
+        /*อันนี้ ปรับปุ่มย้อนกลับให้พอดีกำลังสวย*/
+        margin: 20px 0;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

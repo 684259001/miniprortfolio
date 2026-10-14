@@ -10,7 +10,7 @@
     --bg-secondary: #ffe803;
     --bg-pastel-secondary: #fff8ae;
     --bg-light: #ffffff;
-    --bg-header: linear-gradient(90deg, #dbedff, #a4d6f1);
+    --bg-header: linear-gradient(90deg, #404040, #000000);
     --bg-card: linear-gradient(90deg, #2f3337, #101d33);
 
     /* ================ text colors ================ */
@@ -22,6 +22,7 @@
     --text-black: #000000;
 
 }
+
 body {
     /* 'Raleway' */
     font-family: 'Kanit';
@@ -32,8 +33,10 @@ body {
     display: flex;
     flex-direction: column;
     background: var(--bg-header);
-    padding-top: 70px; /* ระยะว่างสำหรับ header ที่ fixed */
+    padding-top: 70px;
+    /* ระยะว่างสำหรับ header ที่ fixed */
 }
+
 /* =============== header ==============*/
 .header {
     background: var(--bg-light);
@@ -67,6 +70,7 @@ body {
     text-decoration: none;
     padding: 20px;
 }
+
 /* =============== navbar ==============*/
 .nav-list {
     display: flex;
@@ -106,11 +110,12 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    /* จัดการ์ดให้เท่ากันไม่เหลื่อมกัน ยืดขยายเท่ากันสวยงานในคอนเทนเนอร์ */
     align-items: stretch;
 }
 
 .work-card {
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--bg-pastel-secondary);
     border: 2px solid rgba(44, 15, 0, 0.15);
     border-radius: 20px;
     overflow: hidden;
@@ -135,7 +140,7 @@ body {
 }
 
 .work-content h2 {
-    color: var(--text-primary);
+    color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
 
@@ -147,8 +152,51 @@ body {
 .footer {
     margin-top: auto;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: var(--text-black);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--text-light);
     padding: 20px;
     width: 100%;
+}
+
+/* ============================ Responsive ============================= */
+
+/* ============== mobile ============= */
+@media (max-width: 786px) {
+    .header-title {
+        font-size: 22px;
+        padding: 10px;
+    }
+    .nav-list {
+        gap: 10px;
+        padding-right: 10px;
+    }
+    .nav-list a {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+    .main-layout {
+        padding: 1rem 0.5rem 2rem;
+    }
+    .work-grid {
+        /* ===== บังคับแสดงผล 2 การ์ดต่อ 1 แถว ======  */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .work-card {
+        border-radius: 12px;
+    }
+    .work-card img {
+        /* ปรับฟามสุงภาพ */
+        height: 120px;
+    }
+    .work-content {
+        padding: 8px;
+    }
+    .work-content h2 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    .work-content p {
+        font-size: 11px;
+    }
 }

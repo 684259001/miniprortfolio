@@ -10,7 +10,7 @@
     --bg-secondary: #ffe803;
     --bg-pastel-secondary: #fff8ae;
     --bg-light: #ffffff;
-    --bg-header: linear-gradient(90deg, #dbedff, #a4d6f1);
+    --bg-header: linear-gradient(90deg, #ffffff, #000000);
     --bg-card: linear-gradient(90deg, #2f3337, #101d33);
 
     /* ================ text colors ================ */
@@ -44,6 +44,11 @@ body {
 
     /* ให้พื้นหลังอยู่กับที่ขณะเลื่อนหน้าเว็บ */
     background-attachment: fixed;
+
+    /* คำสั่งนี้จะช่วยให้ footer ไม่ลอย ทำให้บอดี้มันขยายเต็มจอ */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
 
 }
@@ -117,9 +122,11 @@ body {
     /*  จจัดเรียงข้อความจากบนลงล่าง */
     flex-direction: column;
 
-    /* จัดให้กล่องอยู่ทางซ้าย */
+    /* จัดให้กล่องอยู่ตรงกลาง */
     align-items: center;
     padding: 200px;
+    /* ดัน footer ลงล่างสุด */
+    flex: 1;
 }
 
 .main-name {
@@ -164,8 +171,48 @@ body {
 
 .footer {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     color: var(--text-secondary);
     padding: 20px;
     margin-top: 30px;
+}
+
+/* ============================ Responsive ============================= */
+
+/* ============== mobile ============= */
+@media (max-width: 786px) {
+    .header-title {
+        font-size: 22px;
+        padding: 10px;
+    }
+    .nav-list {
+        gap: 10px;
+        padding-right: 10px;
+    }
+    .nav-list a {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+    .main-layout {
+        /* ปรับระยะขอบบน-ข้าง-ล่าง ไม่ให้กว้างเกินไปในมือถือ */
+        padding: 120px 20px 40px;
+    }
+    .main-name {
+        text-align: center;
+        width: 100%;
+    }
+    .main-name h1 {
+        font-size: 26px;
+    }
+    .main-name h4 {
+        font-size: 16px;
+    }
+    .main-name p {
+        font-size: 13px;
+    }
+    .profile-btn {
+        margin: 20px 0;
+        padding: 8px 18px;
+        font-size: 14px;
+    }
 }
