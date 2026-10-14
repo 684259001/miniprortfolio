@@ -35,7 +35,7 @@ body {
 
     background-color: var(--bg-light);
     /* รูปภาพเป็นพื้นหลัง */
-    background-image: url("/images/bgkama.png");
+    background-image: url("../images/bgkama.png");
 
     /* ขยายรูปให้เต็มพื้นที่หน้าจอ */
     background-size: cover;
